@@ -1,0 +1,16 @@
+#pragma once
+#ifndef OPENGM_PYTHON_OPENGM_PYTHON_VERSION_MAJOR_HPP
+#define OPENGM_PYTHON_OPENGM_PYTHON_VERSION_MAJOR_HPP
+
+
+
+#define OPENGM_PYTHON_VERSION_MAJOR 0
+
+
+namespace opengm {
+
+
+} // end namespace opengm
+
+
+#endif // OPENGM_PYTHON_OPENGM_PYTHON_VERSION_MAJOR_HPP

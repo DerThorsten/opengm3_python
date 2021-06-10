@@ -1,0 +1,8 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+libdir=${prefix}/@CMAKE_INSTALL_LIBDIR@
+includedir=${prefix}/include
+
+Name: opengm_python
+Description: python bindings for opengm
+Version: @opengm_python_VERSION@
+Cflags: -I${includedir}

@@ -1,0 +1,51 @@
+package:
+  name: opengm_python
+  version: 0.1.0
+
+source:
+  path: ../
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - cmake>=3.1
+    - conda-forge::xtl
+    - conda-forge::xtensor
+    - python>=3.6
+    - numpy>=1.16
+    - conda-forge::pybind11
+    - conda-forge::xtensor-python
+    
+  run:
+    - numpy>=1.16
+    - python>=3.6
+    
+test:
+  requires:
+    - pytest
+  imports:
+    - opengm_python
+  
+  commands:
+    - test -d ${PREFIX}/include/opengm_python           # [unix]
+    - test -f ${PREFIX}/include/opengm_python/opengm_python.hpp # [unix]
+    - if exist %LIBRARY_PREFIX%\include\opengm_python\opengm_python.hpp (exit 0) else (exit 1)  # [win]
+    # - make cpp-test
+    # -  make python-test
+
+about:
+  home:  https://github.com/DerThorsten/opengm_python
+  license: MIT
+  license_family: MIT
+  
+  summary: 'python bindings for opengm'
+  description: 'python bindings for opengm'
+  documentation_url: https://readthedocs.org/projects/opengm_python/
+  dev_url: https://github.com/DerThorsten/opengm_python
+
+extra:
+  recipe-maintainers:
+    - Thorsten Beier
+
